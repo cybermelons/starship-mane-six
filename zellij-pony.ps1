@@ -65,6 +65,22 @@ $Palettes = @{
     red='#c8506e'; green='#9bb86b'; yellow='#fde9a4'
     blue='#a8c0d8'; magenta='#f4a8c8'; cyan='#b8e0d0'; orange='#f0a04b'
   }
+  # Fluttershy variants — same palette family, different role arrangements.
+  'fluttershy-swap' = @{
+    fg='#fff7d6'; bg='#1a140a'; black='#2d2418'; white='#fff7d6'
+    red='#c8506e'; green='#9bb86b'; yellow='#fde9a4'
+    blue='#a8c0d8'; magenta='#f4a8c8'; cyan='#b8e0d0'; orange='#f0a04b'
+  }
+  'fluttershy-pinkbg' = @{
+    fg='#2d1424'; bg='#fde2f3'; black='#2d1424'; white='#fde2f3'
+    red='#c8506e'; green='#5e7e3a'; yellow='#a87914'
+    blue='#5e7c98'; magenta='#a8197a'; cyan='#3e7e6c'; orange='#b8541a'
+  }
+  'fluttershy-yellowbg' = @{
+    fg='#2d2418'; bg='#fde9a4'; black='#2d2418'; white='#fde9a4'
+    red='#c8506e'; green='#5e7e3a'; yellow='#a87914'
+    blue='#5e7c98'; magenta='#8c2858'; cyan='#3e7e6c'; orange='#b8541a'
+  }
 }
 
 # Light-mode ANSI palettes — terminal bg becomes light, accents darken for contrast.
@@ -140,6 +156,27 @@ $Chromes = @{
     rs_bg='#f4a8c8'; rs_base='#2d2418'; rs_e0='#1a4c30'; rs_e1='#4a3d28'; rs_e2='#2d2418'; rs_e3='#3a2f1f'
     frame_sel='#d4b85a'; frame_un='#4a3d28'; frame_hl='#f4a8c8'
     ok='#9bb86b'; err='#c8506e'
+  }
+  # Pink as primary (unselected), yellow as accent (selected). Dark terminal bg.
+  'fluttershy-swap' = @{
+    ru_bg='#f4a8c8'; ru_base='#2d2418'; ru_e0='#1a4c30'; ru_e1='#4a3d28'; ru_e2='#2d2418'; ru_e3='#3a2f1f'
+    rs_bg='#fde9a4'; rs_base='#2d2418'; rs_e0='#c8506e'; rs_e1='#4a3d28'; rs_e2='#2d2418'; rs_e3='#3a2f1f'
+    frame_sel='#f4a8c8'; frame_un='#4a3d28'; frame_hl='#fde9a4'
+    ok='#9bb86b'; err='#c8506e'
+  }
+  # Pale pink terminal bg, dark ribbons (gold + deep pink).
+  'fluttershy-pinkbg' = @{
+    ru_bg='#a87914'; ru_base='#fff7d6'; ru_e0='#fff7d6'; ru_e1='#fde9a4'; ru_e2='#fff7d6'; ru_e3='#fff7d6'
+    rs_bg='#8c2858'; rs_base='#fff7d6'; rs_e0='#fde9a4'; rs_e1='#f4a8c8'; rs_e2='#fff7d6'; rs_e3='#fde9a4'
+    frame_sel='#a87914'; frame_un='#4a3d28'; frame_hl='#8c2858'
+    ok='#5e7e3a'; err='#c8506e'
+  }
+  # Light butter terminal bg, deep pink ribbons.
+  'fluttershy-yellowbg' = @{
+    ru_bg='#c8506e'; ru_base='#fff7d6'; ru_e0='#fff7d6'; ru_e1='#fde9a4'; ru_e2='#fff7d6'; ru_e3='#fff7d6'
+    rs_bg='#8c2858'; rs_base='#fff7d6'; rs_e0='#fde9a4'; rs_e1='#f4a8c8'; rs_e2='#fff7d6'; rs_e3='#fde9a4'
+    frame_sel='#c8506e'; frame_un='#4a3d28'; frame_hl='#8c2858'
+    ok='#5e7e3a'; err='#c8506e'
   }
 }
 
@@ -265,6 +302,14 @@ themes {
             emphasis_2 $ru_e2
             emphasis_3 $ru_e3
         }
+        frame_unselected {
+            base       $fr_un
+            background $(HexRgb $p.bg)
+            emphasis_0 $ru_e0
+            emphasis_1 $ru_e1
+            emphasis_2 $ru_e2
+            emphasis_3 $ru_e3
+        }
         frame_highlight {
             base       $fr_hl
             background $ru_bg
@@ -308,7 +353,8 @@ function WriteOne([string]$name) {
 New-Item -ItemType Directory -Force $OutDir | Out-Null
 
 if ($All) {
-  foreach ($name in $Palettes.Keys) { WriteOne $name }
+  $iterKeys = if ($Light) { $Palettes_Light.Keys } else { $Palettes.Keys }
+  foreach ($name in $iterKeys) { WriteOne $name }
   Write-Host ""
   Write-Host "Add one of these to $ConfigPath :"
   foreach ($name in $Palettes.Keys) { Write-Host "  theme `"pony-$name`"" }

@@ -53,6 +53,9 @@ $Palettes = @{
   applejack  = @{ fg='#fde8c8'; bg='#150a06'; red='#d97706'; green='#4a8c3a'; yellow='#f5d068'; blue='#6cb4ee'; magenta='#b48ce8'; cyan='#7fb8d4'; orange='#f0a04b' }
   rarity     = @{ fg='#f5edff'; bg='#0f0a1c'; red='#f5a9d0'; green='#94c973'; yellow='#f0d878'; blue='#7fb8d4'; magenta='#9d7ec9'; cyan='#d4c0ed'; orange='#f0a04b' }
   fluttershy = @{ fg='#fff7d6'; bg='#1a140a'; red='#c8506e'; green='#9bb86b'; yellow='#fde9a4'; blue='#a8c0d8'; magenta='#f4a8c8'; cyan='#b8e0d0'; orange='#f0a04b' }
+  'fluttershy-swap' = @{ fg='#fff7d6'; bg='#1a140a'; red='#c8506e'; green='#9bb86b'; yellow='#fde9a4'; blue='#a8c0d8'; magenta='#f4a8c8'; cyan='#b8e0d0'; orange='#f0a04b' }
+  'fluttershy-pinkbg' = @{ fg='#2d1424'; bg='#fde2f3'; red='#c8506e'; green='#5e7e3a'; yellow='#a87914'; blue='#5e7c98'; magenta='#a8197a'; cyan='#3e7e6c'; orange='#b8541a' }
+  'fluttershy-yellowbg' = @{ fg='#2d2418'; bg='#fde9a4'; red='#c8506e'; green='#5e7e3a'; yellow='#a87914'; blue='#5e7c98'; magenta='#8c2858'; cyan='#3e7e6c'; orange='#b8541a' }
 }
 $Chromes = @{
   twilight   = @{ ru_bg='#b48ce8'; ru_base='#1a1033'; ru_e0='#3d1f6e'; ru_e1='#2d1b4e'; ru_e2='#1a1033'; ru_e3='#0a0414'; rs_bg='#f5a9d0'; rs_base='#1a1033'; rs_e0='#3d1f6e'; rs_e1='#2d1b4e'; rs_e2='#1a1033'; rs_e3='#0a0414' }
@@ -61,6 +64,9 @@ $Chromes = @{
   applejack  = @{ ru_bg='#d97706'; ru_base='#2a1810'; ru_e0='#1e4d18'; ru_e1='#4d2e1a'; ru_e2='#2a1810'; ru_e3='#3a2014'; rs_bg='#4a8c3a'; rs_base='#2a1810'; rs_e0='#fde8c8'; rs_e1='#1a0c06'; rs_e2='#2a1810'; rs_e3='#3a2014' }
   rarity     = @{ ru_bg='#9d7ec9'; ru_base='#1a1530'; ru_e0='#2d1f5e'; ru_e1='#2d2447'; ru_e2='#1a1530'; ru_e3='#0f0a1c'; rs_bg='#7fb8d4'; rs_base='#1a1530'; rs_e0='#2d1f5e'; rs_e1='#2d2447'; rs_e2='#1a1530'; rs_e3='#0f0a1c' }
   fluttershy = @{ ru_bg='#fde9a4'; ru_base='#2d2418'; ru_e0='#c8506e'; ru_e1='#4a3d28'; ru_e2='#2d2418'; ru_e3='#3a2f1f'; rs_bg='#f4a8c8'; rs_base='#2d2418'; rs_e0='#1a4c30'; rs_e1='#4a3d28'; rs_e2='#2d2418'; rs_e3='#3a2f1f' }
+  'fluttershy-swap' = @{ ru_bg='#f4a8c8'; ru_base='#2d2418'; ru_e0='#1a4c30'; ru_e1='#4a3d28'; ru_e2='#2d2418'; ru_e3='#3a2f1f'; rs_bg='#fde9a4'; rs_base='#2d2418'; rs_e0='#c8506e'; rs_e1='#4a3d28'; rs_e2='#2d2418'; rs_e3='#3a2f1f' }
+  'fluttershy-pinkbg' = @{ ru_bg='#a87914'; ru_base='#fff7d6'; ru_e0='#fff7d6'; ru_e1='#fde9a4'; ru_e2='#fff7d6'; ru_e3='#fff7d6'; rs_bg='#8c2858'; rs_base='#fff7d6'; rs_e0='#fde9a4'; rs_e1='#f4a8c8'; rs_e2='#fff7d6'; rs_e3='#fde9a4' }
+  'fluttershy-yellowbg' = @{ ru_bg='#c8506e'; ru_base='#fff7d6'; ru_e0='#fff7d6'; ru_e1='#fde9a4'; ru_e2='#fff7d6'; ru_e3='#fff7d6'; rs_bg='#8c2858'; rs_base='#fff7d6'; rs_e0='#fde9a4'; rs_e1='#f4a8c8'; rs_e2='#fff7d6'; rs_e3='#fde9a4' }
 }
 
 $Palettes_Light = @{
