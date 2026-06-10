@@ -18,7 +18,7 @@ themes {
         // UI chrome overrides (status bar, tabs, frames) — decoupled from ANSI
         ribbon_unselected {
             base       253 226 243
-            background 45 20 36
+            background 92 35 71
             emphasis_0 108 180 238
             emphasis_1 245 169 208
             emphasis_2 249 213 110
@@ -34,7 +34,7 @@ themes {
         }
         text_unselected {
             base       253 226 243
-            background 45 20 36
+            background 92 35 71
             emphasis_0 108 180 238
             emphasis_1 245 169 208
             emphasis_2 249 213 110
@@ -50,7 +50,7 @@ themes {
         }
         frame_selected {
             base       245 169 208
-            background 45 20 36
+            background 92 35 71
             emphasis_0 108 180 238
             emphasis_1 245 169 208
             emphasis_2 249 213 110
@@ -58,7 +58,7 @@ themes {
         }
         frame_highlight {
             base       108 180 238
-            background 45 20 36
+            background 92 35 71
             emphasis_0 108 180 238
             emphasis_1 245 169 208
             emphasis_2 249 213 110
@@ -66,7 +66,7 @@ themes {
         }
         exit_code_success {
             base       148 201 115
-            background 45 20 36
+            background 92 35 71
             emphasis_0 108 180 238
             emphasis_1 245 169 208
             emphasis_2 249 213 110
@@ -74,7 +74,7 @@ themes {
         }
         exit_code_error {
             base       232 91 168
-            background 45 20 36
+            background 92 35 71
             emphasis_0 108 180 238
             emphasis_1 245 169 208
             emphasis_2 249 213 110
