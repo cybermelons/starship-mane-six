@@ -12,8 +12,17 @@ param(
   [string]$Pony,
   [switch]$All,
   [switch]$List,
-  [string]$OutDir = "$HOME\.config\zellij\themes"
+  [string]$OutDir
 )
+
+# Zellij config location differs by platform.
+if (-not $OutDir) {
+  if ($IsWindows -or $env:OS -eq 'Windows_NT') {
+    $OutDir = Join-Path $env:APPDATA 'Zellij\config\themes'
+  } else {
+    $OutDir = Join-Path $HOME '.config/zellij/themes'
+  }
+}
 
 # Palettes derived from the starship pony palettes, extended to zellij's 11 slots
 # (fg, bg, black, red, green, yellow, blue, magenta, cyan, white, orange).
