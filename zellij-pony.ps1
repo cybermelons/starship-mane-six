@@ -29,7 +29,7 @@ if (-not $OutDir) {
 # Each pony's bg matches its complementary backdrop from preview.ps1.
 $Palettes = @{
   twilight = @{
-    fg='#f5e6ff'; bg='#120a1f'; black='#1a1033'; white='#f5e6ff'
+    fg='#f5e6ff'; bg='#0a0414'; black='#1a1033'; white='#f5e6ff'
     red='#f5a9d0'; green='#6bcf7f'; yellow='#ffd93d'
     blue='#6cb4ee'; magenta='#b48ce8'; cyan='#7fb8d4'; orange='#f0a04b'
   }
@@ -45,7 +45,7 @@ $Palettes = @{
   }
   applejack = @{
     fg='#fde8c8'; bg='#150a06'; black='#2a1810'; white='#fde8c8'
-    red='#d97706'; green='#4a8c3a'; yellow='#f0a04b'
+    red='#d97706'; green='#4a8c3a'; yellow='#f5d068'
     blue='#6cb4ee'; magenta='#b48ce8'; cyan='#7fb8d4'; orange='#f0a04b'
   }
   rarity = @{
