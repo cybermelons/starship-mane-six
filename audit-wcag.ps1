@@ -1,6 +1,8 @@
-# WCAG contrast audit for all 6 pony zellij themes.
-# Computes contrast ratios for every text-on-background pair and reports pass/fail.
+# WCAG contrast audit for all 6 pony zellij themes (dark variant by default).
+# Pass -Light to audit the light variants instead.
 # Thresholds: AA normal text 4.5:1, AA large/UI 3:1, AAA 7:1.
+
+param([switch]$Light)
 
 function HexToRgb([string]$hex) {
   $h = $hex.TrimStart('#')
@@ -60,6 +62,25 @@ $Chromes = @{
   rarity     = @{ ru_bg='#9d7ec9'; ru_base='#1a1530'; ru_e0='#2d1f5e'; ru_e1='#2d2447'; ru_e2='#1a1530'; ru_e3='#0f0a1c'; rs_bg='#7fb8d4'; rs_base='#1a1530'; rs_e0='#2d1f5e'; rs_e1='#2d2447'; rs_e2='#1a1530'; rs_e3='#0f0a1c' }
   fluttershy = @{ ru_bg='#fde9a4'; ru_base='#2d2418'; ru_e0='#c8506e'; ru_e1='#4a3d28'; ru_e2='#2d2418'; ru_e3='#3a2f1f'; rs_bg='#f4a8c8'; rs_base='#2d2418'; rs_e0='#1a4c30'; rs_e1='#4a3d28'; rs_e2='#2d2418'; rs_e3='#3a2f1f' }
 }
+
+$Palettes_Light = @{
+  twilight   = @{ fg='#1a1033'; bg='#f5e6ff'; red='#c8506e'; green='#2d8c5e'; yellow='#a87914'; blue='#3a6e98'; magenta='#6b3fa0'; cyan='#3a7090'; orange='#b8541a' }
+  rainbow    = @{ fg='#0d1b2a'; bg='#e8f4ff'; red='#b82c2c'; green='#3a8c44'; yellow='#a87914'; blue='#1e4a8c'; magenta='#5e2a8c'; cyan='#1e6e8c'; orange='#b8541a' }
+  pinkie     = @{ fg='#2d1424'; bg='#fde2f3'; red='#a8197a'; green='#5e8a3a'; yellow='#a87914'; blue='#3a6e98'; magenta='#a8197a'; cyan='#3a7090'; orange='#b8541a' }
+  applejack  = @{ fg='#2a1810'; bg='#fde8c8'; red='#a85d04'; green='#2d6e22'; yellow='#a87914'; blue='#3a6e98'; magenta='#7a5dc4'; cyan='#3a7090'; orange='#a85d04' }
+  rarity     = @{ fg='#1a1530'; bg='#f5edff'; red='#c8506e'; green='#3a8c5e'; yellow='#a87914'; blue='#3a6e8c'; magenta='#5e3da0'; cyan='#3a6e8c'; orange='#b8541a' }
+  fluttershy = @{ fg='#2d2418'; bg='#fff7d6'; red='#c8506e'; green='#5e7e3a'; yellow='#a87914'; blue='#5e7c98'; magenta='#8c2858'; cyan='#3e7e6c'; orange='#b8541a' }
+}
+$Chromes_Light = @{
+  twilight   = @{ ru_bg='#6b3fa0'; ru_base='#f5e6ff'; ru_e0='#ffd93d'; ru_e1='#f5a9d0'; ru_e2='#f5e6ff'; ru_e3='#fde2f3'; rs_bg='#c8506e'; rs_base='#f5e6ff'; rs_e0='#ffd93d'; rs_e1='#fde2f3'; rs_e2='#f5e6ff'; rs_e3='#fde2f3' }
+  rainbow    = @{ ru_bg='#1e4a8c'; ru_base='#e8f4ff'; ru_e0='#ff6b6b'; ru_e1='#ffd93d'; ru_e2='#e8f4ff'; ru_e3='#89cff0'; rs_bg='#b82c2c'; rs_base='#e8f4ff'; rs_e0='#ffd93d'; rs_e1='#e8f4ff'; rs_e2='#e8f4ff'; rs_e3='#ffffff' }
+  pinkie     = @{ ru_bg='#a8197a'; ru_base='#fde2f3'; ru_e0='#ffd93d'; ru_e1='#6cb4ee'; ru_e2='#fde2f3'; ru_e3='#f5a9d0'; rs_bg='#1e6e98'; rs_base='#fde2f3'; rs_e0='#f5a9d0'; rs_e1='#ffd93d'; rs_e2='#fde2f3'; rs_e3='#89cff0' }
+  applejack  = @{ ru_bg='#a85d04'; ru_base='#fde8c8'; ru_e0='#2a1810'; ru_e1='#fde8c8'; ru_e2='#fde8c8'; ru_e3='#fdc26b'; rs_bg='#2d6e22'; rs_base='#fde8c8'; rs_e0='#fdc26b'; rs_e1='#fde8c8'; rs_e2='#fde8c8'; rs_e3='#fdc26b' }
+  rarity     = @{ ru_bg='#5e3da0'; ru_base='#f5edff'; ru_e0='#7fb8d4'; ru_e1='#d4c0ed'; ru_e2='#f5edff'; ru_e3='#f5edff'; rs_bg='#3a6e8c'; rs_base='#f5edff'; rs_e0='#d4c0ed'; rs_e1='#d4c0ed'; rs_e2='#f5edff'; rs_e3='#f5edff' }
+  fluttershy = @{ ru_bg='#a87914'; ru_base='#fff7d6'; ru_e0='#fff7d6'; ru_e1='#fde9a4'; ru_e2='#fff7d6'; ru_e3='#fff7d6'; rs_bg='#8c2858'; rs_base='#fff7d6'; rs_e0='#fde9a4'; rs_e1='#f4a8c8'; rs_e2='#fff7d6'; rs_e3='#fde9a4' }
+}
+
+if ($Light) { $Palettes = $Palettes_Light; $Chromes = $Chromes_Light }
 
 # === Audit ===
 foreach ($name in $Palettes.Keys) {

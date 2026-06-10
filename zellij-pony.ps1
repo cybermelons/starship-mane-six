@@ -13,6 +13,7 @@ param(
   [string]$Pony,
   [switch]$All,
   [switch]$List,
+  [switch]$Light,
   [string]$OutDir
 )
 
@@ -66,6 +67,40 @@ $Palettes = @{
   }
 }
 
+# Light-mode ANSI palettes — terminal bg becomes light, accents darken for contrast.
+$Palettes_Light = @{
+  twilight = @{
+    fg='#1a1033'; bg='#f5e6ff'; black='#1a1033'; white='#f5e6ff'
+    red='#c8506e'; green='#2d8c5e'; yellow='#a87914'
+    blue='#3a6e98'; magenta='#6b3fa0'; cyan='#3a7090'; orange='#b8541a'
+  }
+  rainbow = @{
+    fg='#0d1b2a'; bg='#e8f4ff'; black='#0d1b2a'; white='#e8f4ff'
+    red='#b82c2c'; green='#3a8c44'; yellow='#a87914'
+    blue='#1e4a8c'; magenta='#5e2a8c'; cyan='#1e6e8c'; orange='#b8541a'
+  }
+  pinkie = @{
+    fg='#2d1424'; bg='#fde2f3'; black='#2d1424'; white='#fde2f3'
+    red='#a8197a'; green='#5e8a3a'; yellow='#a87914'
+    blue='#3a6e98'; magenta='#a8197a'; cyan='#3a7090'; orange='#b8541a'
+  }
+  applejack = @{
+    fg='#2a1810'; bg='#fde8c8'; black='#2a1810'; white='#fde8c8'
+    red='#a85d04'; green='#2d6e22'; yellow='#a87914'
+    blue='#3a6e98'; magenta='#7a5dc4'; cyan='#3a7090'; orange='#a85d04'
+  }
+  rarity = @{
+    fg='#1a1530'; bg='#f5edff'; black='#1a1530'; white='#f5edff'
+    red='#c8506e'; green='#3a8c5e'; yellow='#a87914'
+    blue='#3a6e8c'; magenta='#5e3da0'; cyan='#3a6e8c'; orange='#b8541a'
+  }
+  fluttershy = @{
+    fg='#2d2418'; bg='#fff7d6'; black='#2d2418'; white='#fff7d6'
+    red='#c8506e'; green='#5e7e3a'; yellow='#a87914'
+    blue='#5e7c98'; magenta='#8c2858'; cyan='#3e7e6c'; orange='#b8541a'
+  }
+}
+
 # Chrome palettes drive zellij UI (status bar, tabs, frames, exit codes).
 # These are DECOUPLED from the 11 ANSI slots so terminal programs and the chrome
 # can use different colors. ribbon_*_e0 is the hotkey KEY letter color.
@@ -105,6 +140,47 @@ $Chromes = @{
     rs_bg='#f4a8c8'; rs_base='#2d2418'; rs_e0='#1a4c30'; rs_e1='#4a3d28'; rs_e2='#2d2418'; rs_e3='#3a2f1f'
     frame_sel='#d4b85a'; frame_un='#4a3d28'; frame_hl='#f4a8c8'
     ok='#9bb86b'; err='#c8506e'
+  }
+}
+
+# Light-mode chrome — ribbon bgs DARK (stand out against light terminal bg), text LIGHT.
+# Rule: on dark ribbon bg, ALL emphasis must be light shades (mirror of dark mode's all-dark rule).
+$Chromes_Light = @{
+  twilight = @{
+    ru_bg='#6b3fa0'; ru_base='#f5e6ff'; ru_e0='#ffd93d'; ru_e1='#f5a9d0'; ru_e2='#f5e6ff'; ru_e3='#fde2f3'
+    rs_bg='#c8506e'; rs_base='#f5e6ff'; rs_e0='#ffd93d'; rs_e1='#fde2f3'; rs_e2='#f5e6ff'; rs_e3='#fde2f3'
+    frame_sel='#6b3fa0'; frame_un='#9d7ec9'; frame_hl='#c8506e'
+    ok='#2d8c5e'; err='#c8506e'
+  }
+  rainbow = @{
+    ru_bg='#1e4a8c'; ru_base='#e8f4ff'; ru_e0='#ff6b6b'; ru_e1='#ffd93d'; ru_e2='#e8f4ff'; ru_e3='#89cff0'
+    rs_bg='#b82c2c'; rs_base='#e8f4ff'; rs_e0='#ffd93d'; rs_e1='#e8f4ff'; rs_e2='#e8f4ff'; rs_e3='#ffffff'
+    frame_sel='#1e4a8c'; frame_un='#1b3a5c'; frame_hl='#b82c2c'
+    ok='#3a8c44'; err='#b82c2c'
+  }
+  pinkie = @{
+    ru_bg='#a8197a'; ru_base='#fde2f3'; ru_e0='#ffd93d'; ru_e1='#6cb4ee'; ru_e2='#fde2f3'; ru_e3='#f5a9d0'
+    rs_bg='#1e6e98'; rs_base='#fde2f3'; rs_e0='#f5a9d0'; rs_e1='#ffd93d'; rs_e2='#fde2f3'; rs_e3='#89cff0'
+    frame_sel='#a8197a'; frame_un='#5c2347'; frame_hl='#1e6e98'
+    ok='#5e8a3a'; err='#a8197a'
+  }
+  applejack = @{
+    ru_bg='#a85d04'; ru_base='#fde8c8'; ru_e0='#2a1810'; ru_e1='#fde8c8'; ru_e2='#fde8c8'; ru_e3='#fdc26b'
+    rs_bg='#2d6e22'; rs_base='#fde8c8'; rs_e0='#fdc26b'; rs_e1='#fde8c8'; rs_e2='#fde8c8'; rs_e3='#fdc26b'
+    frame_sel='#a85d04'; frame_un='#4d2e1a'; frame_hl='#2d6e22'
+    ok='#2d6e22'; err='#a85d04'
+  }
+  rarity = @{
+    ru_bg='#5e3da0'; ru_base='#f5edff'; ru_e0='#7fb8d4'; ru_e1='#d4c0ed'; ru_e2='#f5edff'; ru_e3='#f5edff'
+    rs_bg='#3a6e8c'; rs_base='#f5edff'; rs_e0='#d4c0ed'; rs_e1='#d4c0ed'; rs_e2='#f5edff'; rs_e3='#f5edff'
+    frame_sel='#5e3da0'; frame_un='#2d2447'; frame_hl='#3a6e8c'
+    ok='#3a8c5e'; err='#c8506e'
+  }
+  fluttershy = @{
+    ru_bg='#a87914'; ru_base='#fff7d6'; ru_e0='#fff7d6'; ru_e1='#fde9a4'; ru_e2='#fff7d6'; ru_e3='#fff7d6'
+    rs_bg='#8c2858'; rs_base='#fff7d6'; rs_e0='#fde9a4'; rs_e1='#f4a8c8'; rs_e2='#fff7d6'; rs_e3='#fde9a4'
+    frame_sel='#a87914'; frame_un='#4a3d28'; frame_hl='#8c2858'
+    ok='#5e7e3a'; err='#c8506e'
   }
 }
 
@@ -219,8 +295,12 @@ themes {
 }
 
 function WriteOne([string]$name) {
-  $out = Join-Path $OutDir "pony-$name.kdl"
-  $kdl = ToKdl $name $Palettes[$name] $Chromes[$name]
+  $palettes = if ($Light) { $Palettes_Light } else { $Palettes }
+  $chromes  = if ($Light) { $Chromes_Light  } else { $Chromes  }
+  $suffix   = if ($Light) { '-light' } else { '' }
+  $themeName = "$name$suffix"
+  $out = Join-Path $OutDir "pony-$themeName.kdl"
+  $kdl = ToKdl $themeName $palettes[$name] $chromes[$name]
   [System.IO.File]::WriteAllText($out, $kdl, [System.Text.UTF8Encoding]::new($false))
   Write-Host "Wrote $out"
 }

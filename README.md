@@ -56,10 +56,14 @@ Open a new shell to see the change live.
 A matching Mane 6 theme set for the [Zellij](https://zellij.dev) terminal multiplexer ships alongside:
 
 ```powershell
-./zellij-pony.ps1 -Pony twilight    # writes ~/.config/zellij/themes/pony-twilight.kdl
-./zellij-pony.ps1 -All               # all 6
+./zellij-pony.ps1 -Pony twilight              # writes pony-twilight.kdl (dark)
+./zellij-pony.ps1 -Pony fluttershy -Light     # writes pony-fluttershy-light.kdl (light)
+./zellij-pony.ps1 -All                        # all 6 dark
+./zellij-pony.ps1 -All -Light                 # all 6 light
 ./zellij-pony.ps1 -List
 ```
+
+Light variants invert the role of foreground/background: terminal bg becomes the pony's lightest palette color (cream, butter, lavender-white), text becomes dark, ribbon bgs use saturated dark variants. Both light and dark variants pass WCAG ≥3:1 for all chrome text/bg pairs (run `./audit-wcag.ps1` or `./audit-wcag.ps1 -Light` to verify).
 
 Then activate by adding to `~/.config/zellij/config.kdl`:
 
