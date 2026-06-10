@@ -55,8 +55,8 @@ $Palettes = @{
   }
   fluttershy = @{
     fg='#fff7d6'; bg='#1a140a'; black='#2d2418'; white='#fff7d6'
-    red='#f4a8c8'; green='#94c973'; yellow='#fde9a4'
-    blue='#6cb4ee'; magenta='#d4b85a'; cyan='#89cff0'; orange='#f0a04b'
+    red='#c8506e'; green='#9bb86b'; yellow='#fde9a4'
+    blue='#a8c0d8'; magenta='#f4a8c8'; cyan='#b8e0d0'; orange='#f0a04b'
   }
 }
 
