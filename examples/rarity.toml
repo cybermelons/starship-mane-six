@@ -1,0 +1,84 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+# Rarity — elegant violet-white with diamond cyan accents
+
+format = """
+[░▒▓](#d4c0ed)\
+[  ](bg:#d4c0ed fg:#1a1530)\
+[](bg:#9d7ec9 fg:#d4c0ed)\
+$directory\
+[](fg:#9d7ec9 bg:#2d2447)\
+$git_branch\
+$git_status\
+[](fg:#2d2447 bg:#1f1a38)\
+$nodejs\
+$bun\
+$rust\
+$golang\
+$php\
+$python\
+[](fg:#1f1a38 bg:#1a1530)\
+$time\
+[ ](fg:#1a1530)\
+\n$character"""
+
+[directory]
+style = "fg:#f5edff bg:#9d7ec9"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#2d2447"
+format = '[[ $symbol $branch ](fg:#7fb8d4 bg:#2d2447)]($style)'
+
+[git_status]
+style = "bg:#2d2447"
+format = '[[($all_status$ahead_behind )](fg:#7fb8d4 bg:#2d2447)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#1f1a38"
+format = '[[ $symbol ($version) ](fg:#d4c0ed bg:#1f1a38)]($style)'
+
+[bun]
+symbol = ""
+style = "bg:#1f1a38"
+format = '[[ $symbol ($version) ](fg:#d4c0ed bg:#1f1a38)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#1f1a38"
+format = '[[ $symbol ($version) ](fg:#d4c0ed bg:#1f1a38)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:#1f1a38"
+format = '[[ $symbol ($version) ](fg:#d4c0ed bg:#1f1a38)]($style)'
+
+[php]
+symbol = ""
+style = "bg:#1f1a38"
+format = '[[ $symbol ($version) ](fg:#d4c0ed bg:#1f1a38)]($style)'
+
+[python]
+symbol = ""
+style = "bg:#1f1a38"
+format = '[[ $symbol ($version )(\($virtualenv\) )](fg:#d4c0ed bg:#1f1a38)]($style)'
+python_binary = ["python", "python3"]
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:#1a1530"
+format = '[[  $time ](fg:#d4c0ed bg:#1a1530)]($style)'
+
+[character]
+success_symbol = '[](#7fb8d4)'
+error_symbol = '[](#9d7ec9)'

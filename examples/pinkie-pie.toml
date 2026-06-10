@@ -1,0 +1,84 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+# Pinkie Pie — party pink with balloon-blue accents
+
+format = """
+[░▒▓](#f5a9d0)\
+[  ](bg:#f5a9d0 fg:#2d1424)\
+[](bg:#e85ba8 fg:#f5a9d0)\
+$directory\
+[](fg:#e85ba8 bg:#5c2347)\
+$git_branch\
+$git_status\
+[](fg:#5c2347 bg:#3d1830)\
+$nodejs\
+$bun\
+$rust\
+$golang\
+$php\
+$python\
+[](fg:#3d1830 bg:#2d1424)\
+$time\
+[ ](fg:#2d1424)\
+\n$character"""
+
+[directory]
+style = "fg:#2d1424 bg:#e85ba8"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#5c2347"
+format = '[[ $symbol $branch ](fg:#6cb4ee bg:#5c2347)]($style)'
+
+[git_status]
+style = "bg:#5c2347"
+format = '[[($all_status$ahead_behind )](fg:#6cb4ee bg:#5c2347)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#3d1830"
+format = '[[ $symbol ($version) ](fg:#f5a9d0 bg:#3d1830)]($style)'
+
+[bun]
+symbol = ""
+style = "bg:#3d1830"
+format = '[[ $symbol ($version) ](fg:#f5a9d0 bg:#3d1830)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#3d1830"
+format = '[[ $symbol ($version) ](fg:#f5a9d0 bg:#3d1830)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:#3d1830"
+format = '[[ $symbol ($version) ](fg:#f5a9d0 bg:#3d1830)]($style)'
+
+[php]
+symbol = ""
+style = "bg:#3d1830"
+format = '[[ $symbol ($version) ](fg:#f5a9d0 bg:#3d1830)]($style)'
+
+[python]
+symbol = ""
+style = "bg:#3d1830"
+format = '[[ $symbol ($version )(\($virtualenv\) )](fg:#f5a9d0 bg:#3d1830)]($style)'
+python_binary = ["python", "python3"]
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:#2d1424"
+format = '[[  $time ](fg:#f5a9d0 bg:#2d1424)]($style)'
+
+[character]
+success_symbol = '[](#f5a9d0)'
+error_symbol = '[](#e85ba8)'
