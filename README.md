@@ -51,6 +51,24 @@ Open a new shell to see the change live.
 ./preview-shapes.ps1                # all 9 shapes in Twilight Sparkle palette
 ```
 
+## Zellij themes
+
+A matching Mane 6 theme set for the [Zellij](https://zellij.dev) terminal multiplexer ships alongside:
+
+```powershell
+./zellij-pony.ps1 -Pony twilight    # writes ~/.config/zellij/themes/pony-twilight.kdl
+./zellij-pony.ps1 -All               # all 6
+./zellij-pony.ps1 -List
+```
+
+Then activate by adding to `~/.config/zellij/config.kdl`:
+
+```kdl
+theme "pony-twilight"
+```
+
+Pre-generated KDL files live in [`zellij-themes/`](zellij-themes/) if you don't want to run PowerShell.
+
 ## Requirements
 
 - [Starship](https://starship.rs) installed and wired into your shell.
