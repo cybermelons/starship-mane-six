@@ -54,7 +54,7 @@ $Palettes = @{
 }
 $Chromes = @{
   twilight   = @{ ru_bg='#b48ce8'; ru_base='#1a1033'; ru_e0='#3d1f6e'; ru_e1='#2d1b4e'; ru_e2='#1a1033'; ru_e3='#0a0414'; rs_bg='#f5a9d0'; rs_base='#1a1033'; rs_e0='#3d1f6e'; rs_e1='#2d1b4e'; rs_e2='#1a1033'; rs_e3='#0a0414' }
-  rainbow    = @{ ru_bg='#5dadec'; ru_base='#0d1b2a'; ru_e0='#8c1a1a'; ru_e1='#1b3a5c'; ru_e2='#0d1b2a'; ru_e3='#27385c'; rs_bg='#ff6b6b'; rs_base='#0d1b2a'; rs_e0='#4a3a08'; rs_e1='#1b3a5c'; rs_e2='#0d1b2a'; rs_e3='#27385c' }
+  rainbow    = @{ ru_bg='#5dadec'; ru_base='#0d1b2a'; ru_e0='#8c1a1a'; ru_e1='#5a2a8c'; ru_e2='#1a4a18'; ru_e3='#6e3a14'; rs_bg='#ff6b6b'; rs_base='#0d1b2a'; rs_e0='#4a3a08'; rs_e1='#1a3a8c'; rs_e2='#1a4a18'; rs_e3='#3a1a5e' }
   pinkie     = @{ ru_bg='#e85ba8'; ru_base='#2d1424'; ru_e0='#1e4070'; ru_e1='#5c2347'; ru_e2='#2d1424'; ru_e3='#3d1830'; rs_bg='#6cb4ee'; rs_base='#2d1424'; rs_e0='#8c2858'; rs_e1='#5c2347'; rs_e2='#2d1424'; rs_e3='#3d1830' }
   applejack  = @{ ru_bg='#d97706'; ru_base='#2a1810'; ru_e0='#1e4d18'; ru_e1='#4d2e1a'; ru_e2='#2a1810'; ru_e3='#3a2014'; rs_bg='#4a8c3a'; rs_base='#2a1810'; rs_e0='#fde8c8'; rs_e1='#1a0c06'; rs_e2='#2a1810'; rs_e3='#3a2014' }
   rarity     = @{ ru_bg='#9d7ec9'; ru_base='#1a1530'; ru_e0='#2d1f5e'; ru_e1='#2d2447'; ru_e2='#1a1530'; ru_e3='#0f0a1c'; rs_bg='#7fb8d4'; rs_base='#1a1530'; rs_e0='#2d1f5e'; rs_e1='#2d2447'; rs_e2='#1a1530'; rs_e3='#0f0a1c' }

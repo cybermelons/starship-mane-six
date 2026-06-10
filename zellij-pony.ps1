@@ -77,8 +77,8 @@ $Chromes = @{
     ok='#4e9d6a'; err='#e85b8a'
   }
   rainbow = @{
-    ru_bg='#5dadec'; ru_base='#0d1b2a'; ru_e0='#8c1a1a'; ru_e1='#1b3a5c'; ru_e2='#0d1b2a'; ru_e3='#27385c'
-    rs_bg='#ff6b6b'; rs_base='#0d1b2a'; rs_e0='#4a3a08'; rs_e1='#1b3a5c'; rs_e2='#0d1b2a'; rs_e3='#27385c'
+    ru_bg='#5dadec'; ru_base='#0d1b2a'; ru_e0='#8c1a1a'; ru_e1='#5a2a8c'; ru_e2='#1a4a18'; ru_e3='#6e3a14'
+    rs_bg='#ff6b6b'; rs_base='#0d1b2a'; rs_e0='#4a3a08'; rs_e1='#1a3a8c'; rs_e2='#1a4a18'; rs_e3='#3a1a5e'
     frame_sel='#89cff0'; frame_un='#1b3a5c'; frame_hl='#ff6b6b'
     ok='#6bcf7f'; err='#ff6b6b'
   }
