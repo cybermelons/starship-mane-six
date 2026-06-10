@@ -221,6 +221,23 @@ $Chromes_Light = @{
   }
 }
 
+# Generate -tinted and -colored variants for each of the 6 main ponies.
+# These differ only in terminal bg luminance (chrome unchanged) so you can
+# A/B-test backdrop darkness in zellij by swapping the theme line.
+$_blackSlot = @{ twilight='#1a1033'; rainbow='#0d1b2a'; pinkie='#2d1424'; applejack='#2a1810'; rarity='#1a1530'; fluttershy='#2d2418' }
+$_gitSlot   = @{ twilight='#2d1b4e'; rainbow='#1b3a5c'; pinkie='#5c2347'; applejack='#4d2e1a'; rarity='#2d2447'; fluttershy='#4a3d28' }
+foreach ($_n in @('twilight','rainbow','pinkie','applejack','rarity','fluttershy')) {
+  $_pT = $Palettes[$_n].Clone()
+  $_pT.bg = $_blackSlot[$_n]; $_pT.black = $Palettes[$_n].bg
+  $Palettes["$_n-tinted"] = $_pT
+  $Chromes["$_n-tinted"] = $Chromes[$_n]
+
+  $_pC = $Palettes[$_n].Clone()
+  $_pC.bg = $_gitSlot[$_n]; $_pC.black = $_blackSlot[$_n]
+  $Palettes["$_n-colored"] = $_pC
+  $Chromes["$_n-colored"] = $Chromes[$_n]
+}
+
 if ($List) {
   Write-Host "Ponies: $($Palettes.Keys -join ', ')"
   return
