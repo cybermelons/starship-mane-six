@@ -167,7 +167,7 @@ themes {
         }
         text_unselected {
             base       $ru_base
-            background $ru_bg
+            background $(HexRgb $p.bg)
             emphasis_0 $ru_e0
             emphasis_1 $ru_e1
             emphasis_2 $ru_e2

@@ -34,7 +34,7 @@ themes {
         }
         text_unselected {
             base       253 226 243
-            background 92 35 71
+            background 26 10 20
             emphasis_0 108 180 238
             emphasis_1 245 169 208
             emphasis_2 249 213 110
