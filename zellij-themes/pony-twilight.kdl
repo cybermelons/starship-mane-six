@@ -20,65 +20,65 @@ themes {
             base       26 16 51
             background 180 140 232
             emphasis_0 107 63 160
-            emphasis_1 245 169 208
+            emphasis_1 45 27 78
             emphasis_2 26 16 51
-            emphasis_3 45 27 78
+            emphasis_3 10 4 20
         }
         ribbon_selected {
             base       26 16 51
             background 245 169 208
             emphasis_0 107 63 160
-            emphasis_1 180 140 232
+            emphasis_1 45 27 78
             emphasis_2 26 16 51
-            emphasis_3 45 27 78
+            emphasis_3 10 4 20
         }
         text_unselected {
             base       26 16 51
             background 10 4 20
             emphasis_0 107 63 160
-            emphasis_1 245 169 208
+            emphasis_1 45 27 78
             emphasis_2 26 16 51
-            emphasis_3 45 27 78
+            emphasis_3 10 4 20
         }
         text_selected {
             base       26 16 51
             background 245 169 208
             emphasis_0 107 63 160
-            emphasis_1 180 140 232
+            emphasis_1 45 27 78
             emphasis_2 26 16 51
-            emphasis_3 45 27 78
+            emphasis_3 10 4 20
         }
         frame_selected {
             base       180 140 232
             background 180 140 232
             emphasis_0 107 63 160
-            emphasis_1 245 169 208
+            emphasis_1 45 27 78
             emphasis_2 26 16 51
-            emphasis_3 45 27 78
+            emphasis_3 10 4 20
         }
         frame_highlight {
             base       245 169 208
             background 180 140 232
             emphasis_0 107 63 160
-            emphasis_1 245 169 208
+            emphasis_1 45 27 78
             emphasis_2 26 16 51
-            emphasis_3 45 27 78
+            emphasis_3 10 4 20
         }
         exit_code_success {
             base       78 157 106
             background 180 140 232
             emphasis_0 107 63 160
-            emphasis_1 245 169 208
+            emphasis_1 45 27 78
             emphasis_2 26 16 51
-            emphasis_3 45 27 78
+            emphasis_3 10 4 20
         }
         exit_code_error {
             base       232 91 138
             background 180 140 232
             emphasis_0 107 63 160
-            emphasis_1 245 169 208
+            emphasis_1 45 27 78
             emphasis_2 26 16 51
-            emphasis_3 45 27 78
+            emphasis_3 10 4 20
         }
     }
 }
