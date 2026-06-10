@@ -19,7 +19,7 @@ themes {
         ribbon_unselected {
             base       45 20 36
             background 232 91 168
-            emphasis_0 108 180 238
+            emphasis_0 30 64 112
             emphasis_1 92 35 71
             emphasis_2 45 20 36
             emphasis_3 61 24 48
@@ -27,7 +27,7 @@ themes {
         ribbon_selected {
             base       45 20 36
             background 108 180 238
-            emphasis_0 232 91 168
+            emphasis_0 140 40 88
             emphasis_1 92 35 71
             emphasis_2 45 20 36
             emphasis_3 61 24 48
@@ -43,7 +43,7 @@ themes {
         text_selected {
             base       45 20 36
             background 108 180 238
-            emphasis_0 232 91 168
+            emphasis_0 140 40 88
             emphasis_1 92 35 71
             emphasis_2 45 20 36
             emphasis_3 61 24 48
@@ -51,7 +51,7 @@ themes {
         frame_selected {
             base       245 169 208
             background 232 91 168
-            emphasis_0 108 180 238
+            emphasis_0 30 64 112
             emphasis_1 92 35 71
             emphasis_2 45 20 36
             emphasis_3 61 24 48
@@ -59,7 +59,7 @@ themes {
         frame_highlight {
             base       108 180 238
             background 232 91 168
-            emphasis_0 108 180 238
+            emphasis_0 30 64 112
             emphasis_1 92 35 71
             emphasis_2 45 20 36
             emphasis_3 61 24 48
@@ -67,7 +67,7 @@ themes {
         exit_code_success {
             base       148 201 115
             background 232 91 168
-            emphasis_0 108 180 238
+            emphasis_0 30 64 112
             emphasis_1 92 35 71
             emphasis_2 45 20 36
             emphasis_3 61 24 48
@@ -75,7 +75,7 @@ themes {
         exit_code_error {
             base       232 91 168
             background 232 91 168
-            emphasis_0 108 180 238
+            emphasis_0 30 64 112
             emphasis_1 92 35 71
             emphasis_2 45 20 36
             emphasis_3 61 24 48

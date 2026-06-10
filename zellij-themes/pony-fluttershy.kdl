@@ -27,7 +27,7 @@ themes {
         ribbon_selected {
             base       45 36 24
             background 244 168 200
-            emphasis_0 74 140 58
+            emphasis_0 26 76 48
             emphasis_1 74 61 40
             emphasis_2 45 36 24
             emphasis_3 58 47 31
@@ -43,7 +43,7 @@ themes {
         text_selected {
             base       45 36 24
             background 244 168 200
-            emphasis_0 74 140 58
+            emphasis_0 26 76 48
             emphasis_1 74 61 40
             emphasis_2 45 36 24
             emphasis_3 58 47 31
