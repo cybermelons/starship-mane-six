@@ -17,68 +17,68 @@ themes {
 
         // UI chrome overrides (status bar, tabs, frames) — decoupled from ANSI
         ribbon_unselected {
-            base       245 237 255
-            background 45 36 71
-            emphasis_0 127 184 212
-            emphasis_1 212 192 237
-            emphasis_2 245 169 208
-            emphasis_3 240 216 120
-        }
-        ribbon_selected {
             base       26 21 48
             background 157 126 201
             emphasis_0 127 184 212
+            emphasis_1 212 192 237
+            emphasis_2 26 21 48
+            emphasis_3 45 36 71
+        }
+        ribbon_selected {
+            base       26 21 48
+            background 127 184 212
+            emphasis_0 157 126 201
             emphasis_1 245 237 255
             emphasis_2 26 21 48
             emphasis_3 45 36 71
         }
         text_unselected {
-            base       245 237 255
+            base       26 21 48
             background 15 10 28
             emphasis_0 127 184 212
             emphasis_1 212 192 237
-            emphasis_2 245 169 208
-            emphasis_3 240 216 120
+            emphasis_2 26 21 48
+            emphasis_3 45 36 71
         }
         text_selected {
             base       26 21 48
-            background 157 126 201
-            emphasis_0 127 184 212
+            background 127 184 212
+            emphasis_0 157 126 201
             emphasis_1 245 237 255
             emphasis_2 26 21 48
             emphasis_3 45 36 71
         }
         frame_selected {
             base       212 192 237
-            background 45 36 71
+            background 157 126 201
             emphasis_0 127 184 212
             emphasis_1 212 192 237
-            emphasis_2 245 169 208
-            emphasis_3 240 216 120
+            emphasis_2 26 21 48
+            emphasis_3 45 36 71
         }
         frame_highlight {
             base       127 184 212
-            background 45 36 71
+            background 157 126 201
             emphasis_0 127 184 212
             emphasis_1 212 192 237
-            emphasis_2 245 169 208
-            emphasis_3 240 216 120
+            emphasis_2 26 21 48
+            emphasis_3 45 36 71
         }
         exit_code_success {
             base       155 227 200
-            background 45 36 71
+            background 157 126 201
             emphasis_0 127 184 212
             emphasis_1 212 192 237
-            emphasis_2 245 169 208
-            emphasis_3 240 216 120
+            emphasis_2 26 21 48
+            emphasis_3 45 36 71
         }
         exit_code_error {
             base       245 169 208
-            background 45 36 71
+            background 157 126 201
             emphasis_0 127 184 212
             emphasis_1 212 192 237
-            emphasis_2 245 169 208
-            emphasis_3 240 216 120
+            emphasis_2 26 21 48
+            emphasis_3 45 36 71
         }
     }
 }

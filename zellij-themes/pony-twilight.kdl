@@ -17,68 +17,68 @@ themes {
 
         // UI chrome overrides (status bar, tabs, frames) — decoupled from ANSI
         ribbon_unselected {
-            base       245 230 255
-            background 45 27 78
-            emphasis_0 245 169 208
-            emphasis_1 180 140 232
-            emphasis_2 127 184 212
-            emphasis_3 255 217 61
+            base       26 16 51
+            background 180 140 232
+            emphasis_0 107 63 160
+            emphasis_1 245 169 208
+            emphasis_2 26 16 51
+            emphasis_3 45 27 78
         }
         ribbon_selected {
             base       26 16 51
-            background 180 140 232
+            background 245 169 208
             emphasis_0 107 63 160
-            emphasis_1 10 4 20
-            emphasis_2 45 27 78
-            emphasis_3 245 169 208
+            emphasis_1 180 140 232
+            emphasis_2 26 16 51
+            emphasis_3 45 27 78
         }
         text_unselected {
-            base       245 230 255
+            base       26 16 51
             background 10 4 20
-            emphasis_0 245 169 208
-            emphasis_1 180 140 232
-            emphasis_2 127 184 212
-            emphasis_3 255 217 61
+            emphasis_0 107 63 160
+            emphasis_1 245 169 208
+            emphasis_2 26 16 51
+            emphasis_3 45 27 78
         }
         text_selected {
             base       26 16 51
-            background 180 140 232
+            background 245 169 208
             emphasis_0 107 63 160
-            emphasis_1 10 4 20
-            emphasis_2 45 27 78
-            emphasis_3 245 169 208
+            emphasis_1 180 140 232
+            emphasis_2 26 16 51
+            emphasis_3 45 27 78
         }
         frame_selected {
             base       180 140 232
-            background 45 27 78
-            emphasis_0 245 169 208
-            emphasis_1 180 140 232
-            emphasis_2 127 184 212
-            emphasis_3 255 217 61
+            background 180 140 232
+            emphasis_0 107 63 160
+            emphasis_1 245 169 208
+            emphasis_2 26 16 51
+            emphasis_3 45 27 78
         }
         frame_highlight {
             base       245 169 208
-            background 45 27 78
-            emphasis_0 245 169 208
-            emphasis_1 180 140 232
-            emphasis_2 127 184 212
-            emphasis_3 255 217 61
+            background 180 140 232
+            emphasis_0 107 63 160
+            emphasis_1 245 169 208
+            emphasis_2 26 16 51
+            emphasis_3 45 27 78
         }
         exit_code_success {
             base       78 157 106
-            background 45 27 78
-            emphasis_0 245 169 208
-            emphasis_1 180 140 232
-            emphasis_2 127 184 212
-            emphasis_3 255 217 61
+            background 180 140 232
+            emphasis_0 107 63 160
+            emphasis_1 245 169 208
+            emphasis_2 26 16 51
+            emphasis_3 45 27 78
         }
         exit_code_error {
             base       232 91 138
-            background 45 27 78
-            emphasis_0 245 169 208
-            emphasis_1 180 140 232
-            emphasis_2 127 184 212
-            emphasis_3 255 217 61
+            background 180 140 232
+            emphasis_0 107 63 160
+            emphasis_1 245 169 208
+            emphasis_2 26 16 51
+            emphasis_3 45 27 78
         }
     }
 }
