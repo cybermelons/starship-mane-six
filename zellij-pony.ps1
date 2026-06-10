@@ -166,12 +166,12 @@ themes {
             emphasis_3 $rs_e3
         }
         text_unselected {
-            base       $ru_base
+            base       $(HexRgb $p.fg)
             background $(HexRgb $p.bg)
-            emphasis_0 $ru_e0
-            emphasis_1 $ru_e1
-            emphasis_2 $ru_e2
-            emphasis_3 $ru_e3
+            emphasis_0 $(HexRgb $p.red)
+            emphasis_1 $(HexRgb $p.yellow)
+            emphasis_2 $(HexRgb $p.cyan)
+            emphasis_3 $(HexRgb $p.green)
         }
         text_selected {
             base       $rs_base

@@ -33,12 +33,12 @@ themes {
             emphasis_3 39 56 92
         }
         text_unselected {
-            base       13 27 42
+            base       255 255 255
             background 10 20 32
             emphasis_0 255 107 107
-            emphasis_1 27 58 92
-            emphasis_2 13 27 42
-            emphasis_3 39 56 92
+            emphasis_1 255 217 61
+            emphasis_2 137 207 240
+            emphasis_3 107 207 127
         }
         text_selected {
             base       13 27 42
