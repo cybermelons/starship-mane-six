@@ -159,7 +159,7 @@ format = '[ $G_CLOCK `$time ](fg:$($p.timeFg) bg:$($p.time))'
 [hostname]
 ssh_only = true
 ssh_symbol = ""
-format = '[$hostname ](bg:$($p.cap) fg:$($p.capFg))'
+format = '[`$hostname ](bg:$($p.cap) fg:$($p.capFg))'
 
 [character]
 success_symbol = '[$($p.cutie)]($($p.cap))'
@@ -205,7 +205,7 @@ format = '[ $G_CLOCK `$time ](fg:$($p.timeFg) bg:$($p.time))'
 [hostname]
 ssh_only = true
 ssh_symbol = ""
-format = '[$hostname ](bg:$($p.cap) fg:$($p.capFg))'
+format = '[`$hostname ](bg:$($p.cap) fg:$($p.capFg))'
 
 [character]
 success_symbol = '[$($p.cutie)]($($p.cap))'
@@ -255,7 +255,7 @@ format = '[$G_CLOCK `$time](fg:$($p.timeFg))'
 [hostname]
 ssh_only = true
 ssh_symbol = ""
-format = '[$hostname ](fg:$($p.cap))'
+format = '[`$hostname ](fg:$($p.cap))'
 
 [character]
 success_symbol = '[$($p.cutie)](fg:$($p.cap))'
@@ -300,7 +300,7 @@ format = '[ $G_CLOCK `$time ](fg:$($p.timeFg) bg:$($p.time))'
 [hostname]
 ssh_only = true
 ssh_symbol = ""
-format = '[$hostname ](bg:$($p.cap) fg:$($p.capFg))'
+format = '[`$hostname ](bg:$($p.cap) fg:$($p.capFg))'
 
 [character]
 success_symbol = '[$($p.cutie)]($($p.cap))'
@@ -346,7 +346,7 @@ format = '[$G_CLOCK `$time](fg:$($p.timeFg))'
 [hostname]
 ssh_only = true
 ssh_symbol = ""
-format = '[$hostname ](fg:$($p.cap))'
+format = '[`$hostname ](fg:$($p.cap))'
 
 [character]
 success_symbol = '[$($p.cutie)](fg:$($p.cap))'

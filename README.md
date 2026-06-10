@@ -14,6 +14,14 @@ Starship prompt theme generator inspired by the Mane 6.
 ./pony.ps1 -Restore       # roll back to previous starship.toml
 ```
 
+Bash port (`pony.sh`, requires bash 4+) takes the same options as flags:
+
+```bash
+./pony.sh --pony twilight --shape round
+./pony.sh --list
+./pony.sh --restore
+```
+
 Every run backs up the existing config to `starship.toml.bak` first.
 Open a new shell to see the change live.
 
@@ -63,6 +71,8 @@ A matching Mane 6 theme set for the [Zellij](https://zellij.dev) terminal multip
 ./zellij-pony.ps1 -List
 ```
 
+Bash port available too: `./zellij-pony.sh --pony twilight`, `--all`, `--light`, `--list`.
+
 Light variants invert the role of foreground/background: terminal bg becomes the pony's lightest palette color (cream, butter, lavender-white), text becomes dark, ribbon bgs use saturated dark variants. Both light and dark variants pass WCAG ≥3:1 for all chrome text/bg pairs (run `./audit-wcag.ps1` or `./audit-wcag.ps1 -Light` to verify).
 
 Then activate by adding to `~/.config/zellij/config.kdl`:
@@ -82,8 +92,7 @@ Pre-generated KDL files live in [`zellij-themes/`](zellij-themes/) if you don't 
 
 ## Ready-made TOMLs
 
-Pre-generated examples for each Mane 6 palette live in [`examples/`](examples/).
-If you don't want to run PowerShell, just copy one to `~/.config/starship.toml`.
+All **54 precomputed combos** (every pony × shape) live in [`starship-themes/`](starship-themes/) as `<pony>-<shape>.toml` — no script needed, just copy one to `~/.config/starship.toml`. A curated example per palette is also in [`examples/`](examples/).
 
 ## How it works
 

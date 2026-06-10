@@ -1,0 +1,63 @@
+# Generated: pony=rarity shape=bracketed (regenerate via pony.sh)
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[ ](fg:#d4c0ed)\
+$hostname\
+[\[ ](fg:#9d7ec9)$directory[ \]](fg:#9d7ec9) \
+[\[ ](fg:#7fb8d4)$git_branch$git_status[ \]](fg:#7fb8d4) \
+[\[ ](fg:#d4c0ed)$nodejs$rust$golang$php$python[ \]](fg:#d4c0ed) \
+[\[ ](fg:#d4c0ed)$time[ \]](fg:#d4c0ed)\
+\n$character"""
+
+[directory]
+style = "fg:#f5edff"
+format = "[$path]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+
+[git_branch]
+symbol = ""
+format = '[$symbol $branch](fg:#7fb8d4)'
+
+[git_status]
+format = '[($all_status$ahead_behind)](fg:#7fb8d4)'
+
+[nodejs]
+symbol = ""
+format = '[ $symbol ($version) ](fg:#d4c0ed)'
+
+[rust]
+symbol = ""
+format = '[ $symbol ($version) ](fg:#d4c0ed)'
+
+[golang]
+symbol = ""
+format = '[ $symbol ($version) ](fg:#d4c0ed)'
+
+[php]
+symbol = ""
+format = '[ $symbol ($version) ](fg:#d4c0ed)'
+
+[python]
+symbol = ""
+format = '[ $symbol ($version )(\($virtualenv\) )](fg:#d4c0ed)'
+python_binary = ["python", "python3"]
+
+[time]
+disabled = false
+time_format = "%R"
+format = '[ $time](fg:#d4c0ed)'
+
+[hostname]
+ssh_only = true
+ssh_symbol = ""
+format = '[$hostname ](fg:#d4c0ed)'
+
+[character]
+success_symbol = '[](fg:#d4c0ed)'
+error_symbol = '[](fg:#7fb8d4)'

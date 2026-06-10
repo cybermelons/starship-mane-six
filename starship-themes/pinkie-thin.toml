@@ -1,0 +1,66 @@
+# Generated: pony=pinkie shape=thin (regenerate via pony.sh)
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[ ](fg:#f5a9d0)\
+$hostname\
+$directory\
+[ ](fg:#f5a9d0)\
+$git_branch$git_status\
+[ ](fg:#f5a9d0)\
+$nodejs$rust$golang$php$python\
+[ ](fg:#f5a9d0)\
+$time\
+\n$character"""
+
+[directory]
+style = "fg:#e85ba8"
+format = "[$path]($style) "
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+
+[git_branch]
+symbol = ""
+format = '[$symbol $branch](fg:#6cb4ee) '
+
+[git_status]
+format = '[($all_status$ahead_behind)](fg:#6cb4ee)'
+
+[nodejs]
+symbol = ""
+format = '[ $symbol ($version) ](fg:#f5a9d0)'
+
+[rust]
+symbol = ""
+format = '[ $symbol ($version) ](fg:#f5a9d0)'
+
+[golang]
+symbol = ""
+format = '[ $symbol ($version) ](fg:#f5a9d0)'
+
+[php]
+symbol = ""
+format = '[ $symbol ($version) ](fg:#f5a9d0)'
+
+[python]
+symbol = ""
+format = '[ $symbol ($version )(\($virtualenv\) )](fg:#f5a9d0)'
+python_binary = ["python", "python3"]
+
+[time]
+disabled = false
+time_format = "%R"
+format = '[ $time](fg:#f5a9d0)'
+
+[hostname]
+ssh_only = true
+ssh_symbol = ""
+format = '[$hostname ](fg:#f5a9d0)'
+
+[character]
+success_symbol = '[](fg:#f5a9d0)'
+error_symbol = '[](fg:#6cb4ee)'

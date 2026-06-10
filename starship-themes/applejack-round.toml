@@ -1,0 +1,69 @@
+# Generated: pony=applejack shape=round (regenerate via pony.sh)
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[░▒▓](#f0a04b)\
+[  ](bg:#f0a04b fg:#2a1810)\
+$hostname\
+[](bg:#d97706 fg:#f0a04b)\
+$directory\
+[](fg:#d97706 bg:#4a8c3a)\
+$git_branch$git_status\
+[](fg:#4a8c3a bg:#4d2e1a)\
+$nodejs$rust$golang$php$python\
+[](fg:#4d2e1a bg:#2a1810)\
+$time\
+[](fg:#2a1810)\
+\n$character"""
+
+[directory]
+style = "fg:#fde8c8 bg:#d97706"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+
+[git_branch]
+symbol = ""
+format = '[ $symbol $branch ](fg:#fde8c8 bg:#4a8c3a)'
+
+[git_status]
+format = '[($all_status$ahead_behind )](fg:#fde8c8 bg:#4a8c3a)'
+
+[nodejs]
+symbol = ""
+format = '[ $symbol ($version) ](fg:#f0a04b bg:#4d2e1a)'
+
+[rust]
+symbol = ""
+format = '[ $symbol ($version) ](fg:#f0a04b bg:#4d2e1a)'
+
+[golang]
+symbol = ""
+format = '[ $symbol ($version) ](fg:#f0a04b bg:#4d2e1a)'
+
+[php]
+symbol = ""
+format = '[ $symbol ($version) ](fg:#f0a04b bg:#4d2e1a)'
+
+[python]
+symbol = ""
+format = '[ $symbol ($version )(\($virtualenv\) )](fg:#f0a04b bg:#4d2e1a)'
+python_binary = ["python", "python3"]
+
+[time]
+disabled = false
+time_format = "%R"
+format = '[  $time ](fg:#f0a04b bg:#2a1810)'
+
+[hostname]
+ssh_only = true
+ssh_symbol = ""
+format = '[$hostname ](bg:#f0a04b fg:#2a1810)'
+
+[character]
+success_symbol = '[](#f0a04b)'
+error_symbol = '[](#4a8c3a)'
