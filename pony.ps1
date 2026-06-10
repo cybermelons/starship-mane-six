@@ -123,6 +123,7 @@ $header
 format = """
 [$SHADES]($($p.cap))\
 [ $($p.cutie) ](bg:$($p.cap) fg:$($p.capFg))\
+`$hostname\
 [$d](bg:$($p.dir) fg:$($p.cap))\
 `$directory\
 [$d](fg:$($p.dir) bg:$($p.git))\
@@ -155,6 +156,11 @@ disabled = false
 time_format = "%R"
 format = '[ $G_CLOCK `$time ](fg:$($p.timeFg) bg:$($p.time))'
 
+[hostname]
+ssh_only = true
+ssh_symbol = ""
+format = '[$hostname ](bg:$($p.cap) fg:$($p.capFg))'
+
 [character]
 success_symbol = '[$($p.cutie)]($($p.cap))'
 error_symbol = '[$($p.cutie)]($($p.git))'
@@ -168,7 +174,7 @@ function Pills($p, $s) {
 @"
 $header
 format = """
-[$lc]($($p.cap))[ $($p.cutie) ](bg:$($p.cap) fg:$($p.capFg))[$rc](fg:$($p.cap))\
+[$lc]($($p.cap))[ $($p.cutie) ](bg:$($p.cap) fg:$($p.capFg))`$hostname[$rc](fg:$($p.cap))\
  [$lc]($($p.dir))`$directory[$rc](fg:$($p.dir))\
  [$lc]($($p.git))`$git_branch`$git_status[$rc](fg:$($p.git))\
  [$lc]($($p.lang))`$nodejs`$rust`$golang`$php`$python[$rc](fg:$($p.lang))\
@@ -196,6 +202,11 @@ disabled = false
 time_format = "%R"
 format = '[ $G_CLOCK `$time ](fg:$($p.timeFg) bg:$($p.time))'
 
+[hostname]
+ssh_only = true
+ssh_symbol = ""
+format = '[$hostname ](bg:$($p.cap) fg:$($p.capFg))'
+
 [character]
 success_symbol = '[$($p.cutie)]($($p.cap))'
 error_symbol = '[$($p.cutie)]($($p.git))'
@@ -210,6 +221,7 @@ function Thin($p, $s) {
 $header
 format = """
 [$($p.cutie) ](fg:$($p.cap))\
+`$hostname\
 `$directory\
 [$d ](fg:$($p.cap))\
 `$git_branch`$git_status\
@@ -240,6 +252,11 @@ disabled = false
 time_format = "%R"
 format = '[$G_CLOCK `$time](fg:$($p.timeFg))'
 
+[hostname]
+ssh_only = true
+ssh_symbol = ""
+format = '[$hostname ](fg:$($p.cap))'
+
 [character]
 success_symbol = '[$($p.cutie)](fg:$($p.cap))'
 error_symbol = '[$($p.cutie)](fg:$($p.gitFg))'
@@ -252,7 +269,7 @@ function Block($p, $s) {
 @"
 $header
 format = """
-[ $($p.cutie) ](bg:$($p.cap) fg:$($p.capFg)) \
+[ $($p.cutie) ](bg:$($p.cap) fg:$($p.capFg))`$hostname \
 `$directory \
 `$git_branch`$git_status \
 `$nodejs`$rust`$golang`$php`$python \
@@ -280,6 +297,11 @@ disabled = false
 time_format = "%R"
 format = '[ $G_CLOCK `$time ](fg:$($p.timeFg) bg:$($p.time))'
 
+[hostname]
+ssh_only = true
+ssh_symbol = ""
+format = '[$hostname ](bg:$($p.cap) fg:$($p.capFg))'
+
 [character]
 success_symbol = '[$($p.cutie)]($($p.cap))'
 error_symbol = '[$($p.cutie)]($($p.git))'
@@ -293,6 +315,7 @@ function Brackets($p, $s) {
 $header
 format = """
 [$($p.cutie) ](fg:$($p.cap))\
+`$hostname\
 [\[ ](fg:$($p.dir))`$directory[ \]](fg:$($p.dir)) \
 [\[ ](fg:$($p.gitFg))`$git_branch`$git_status[ \]](fg:$($p.gitFg)) \
 [\[ ](fg:$($p.langFg))`$nodejs`$rust`$golang`$php`$python[ \]](fg:$($p.langFg)) \
@@ -319,6 +342,11 @@ $(LangModules $p.langFg $null)
 disabled = false
 time_format = "%R"
 format = '[$G_CLOCK `$time](fg:$($p.timeFg))'
+
+[hostname]
+ssh_only = true
+ssh_symbol = ""
+format = '[$hostname ](fg:$($p.cap))'
 
 [character]
 success_symbol = '[$($p.cutie)](fg:$($p.cap))'

@@ -1,24 +1,19 @@
+# Generated: pony=fluttershy shape=sharp (regenerate via pony.ps1)
 "$schema" = 'https://starship.rs/config-schema.json'
-# Fluttershy — soft butter-yellow with rose-pink mane accents
 
 format = """
 [░▒▓](#fde9a4)\
-[  ](bg:#fde9a4 fg:#2d2418)\
-[](bg:#d4b85a fg:#fde9a4)\
+[ ʚɞ ](bg:#fde9a4 fg:#2d2418)\
+$hostname\
+[](bg:#d4b85a fg:#fde9a4)\
 $directory\
-[](fg:#d4b85a bg:#4a3d28)\
-$git_branch\
-$git_status\
-[](fg:#4a3d28 bg:#3a2f1f)\
-$nodejs\
-$bun\
-$rust\
-$golang\
-$php\
-$python\
-[](fg:#3a2f1f bg:#2d2418)\
+[](fg:#d4b85a bg:#4a3d28)\
+$git_branch$git_status\
+[](fg:#4a3d28 bg:#3a2f1f)\
+$nodejs$rust$golang$php$python\
+[](fg:#3a2f1f bg:#2d2418)\
 $time\
-[ ](fg:#2d2418)\
+[](fg:#2d2418)\
 \n$character"""
 
 [directory]
@@ -28,57 +23,47 @@ truncation_length = 3
 truncation_symbol = "…/"
 
 [directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
+"Documents" = " "
+"Downloads" = " "
 
 [git_branch]
-symbol = ""
-style = "bg:#4a3d28"
-format = '[[ $symbol $branch ](fg:#f4a8c8 bg:#4a3d28)]($style)'
+symbol = ""
+format = '[ $symbol $branch ](fg:#f4a8c8 bg:#4a3d28)'
 
 [git_status]
-style = "bg:#4a3d28"
-format = '[[($all_status$ahead_behind )](fg:#f4a8c8 bg:#4a3d28)]($style)'
+format = '[($all_status$ahead_behind )](fg:#f4a8c8 bg:#4a3d28)'
 
 [nodejs]
-symbol = ""
-style = "bg:#3a2f1f"
-format = '[[ $symbol ($version) ](fg:#fde9a4 bg:#3a2f1f)]($style)'
-
-[bun]
-symbol = ""
-style = "bg:#3a2f1f"
-format = '[[ $symbol ($version) ](fg:#fde9a4 bg:#3a2f1f)]($style)'
+symbol = ""
+format = '[ $symbol ($version) ](fg:#fde9a4 bg:#3a2f1f)'
 
 [rust]
-symbol = ""
-style = "bg:#3a2f1f"
-format = '[[ $symbol ($version) ](fg:#fde9a4 bg:#3a2f1f)]($style)'
+symbol = ""
+format = '[ $symbol ($version) ](fg:#fde9a4 bg:#3a2f1f)'
 
 [golang]
-symbol = ""
-style = "bg:#3a2f1f"
-format = '[[ $symbol ($version) ](fg:#fde9a4 bg:#3a2f1f)]($style)'
+symbol = ""
+format = '[ $symbol ($version) ](fg:#fde9a4 bg:#3a2f1f)'
 
 [php]
-symbol = ""
-style = "bg:#3a2f1f"
-format = '[[ $symbol ($version) ](fg:#fde9a4 bg:#3a2f1f)]($style)'
+symbol = ""
+format = '[ $symbol ($version) ](fg:#fde9a4 bg:#3a2f1f)'
 
 [python]
-symbol = ""
-style = "bg:#3a2f1f"
-format = '[[ $symbol ($version )(\($virtualenv\) )](fg:#fde9a4 bg:#3a2f1f)]($style)'
+symbol = ""
+format = '[ $symbol ($version )(\($virtualenv\) )](fg:#fde9a4 bg:#3a2f1f)'
 python_binary = ["python", "python3"]
 
 [time]
 disabled = false
 time_format = "%R"
-style = "bg:#2d2418"
-format = '[[  $time ](fg:#f4a8c8 bg:#2d2418)]($style)'
+format = '[  $time ](fg:#f4a8c8 bg:#2d2418)'
+
+[hostname]
+ssh_only = true
+ssh_symbol = ""
+format = '[ ](bg:#fde9a4 fg:#2d2418)'
 
 [character]
-success_symbol = '[](#f4a8c8)'
-error_symbol = '[](#d4b85a)'
+success_symbol = '[ʚɞ](#fde9a4)'
+error_symbol = '[ʚɞ](#4a3d28)'
