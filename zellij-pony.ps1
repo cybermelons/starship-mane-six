@@ -1,6 +1,7 @@
 # Zellij Mane 6 theme generator.
 # Writes KDL theme files under ~/.config/zellij/themes/ (or -OutDir).
-# Activate by adding `theme "pony-<name>"` to ~/.config/zellij/config.kdl.
+# Activate by adding `theme "pony-<name>"` to your zellij config.kdl
+# (path varies by OS: %APPDATA%\Zellij\config\ on Windows, ~/.config/zellij/ on Unix).
 #
 # Examples:
 #   zellij-pony.ps1 -Pony twilight              # write one
@@ -22,6 +23,11 @@ if (-not $OutDir) {
   } else {
     $OutDir = Join-Path $HOME '.config/zellij/themes'
   }
+}
+if ($IsWindows -or $env:OS -eq 'Windows_NT') {
+  $ConfigPath = Join-Path $env:APPDATA 'Zellij\config\config.kdl'
+} else {
+  $ConfigPath = Join-Path $HOME '.config/zellij/config.kdl'
 }
 
 # Palettes derived from the starship pony palettes, extended to zellij's 11 slots
@@ -224,7 +230,7 @@ New-Item -ItemType Directory -Force $OutDir | Out-Null
 if ($All) {
   foreach ($name in $Palettes.Keys) { WriteOne $name }
   Write-Host ""
-  Write-Host "Add one of these to ~/.config/zellij/config.kdl:"
+  Write-Host "Add one of these to $ConfigPath :"
   foreach ($name in $Palettes.Keys) { Write-Host "  theme `"pony-$name`"" }
   return
 }
@@ -233,5 +239,5 @@ if (-not $Pony) { Write-Error "Specify -Pony or -All. Try -List."; return }
 if (-not $Palettes.ContainsKey($Pony)) { Write-Error "Unknown pony '$Pony'. Try -List."; return }
 WriteOne $Pony
 Write-Host ""
-Write-Host "Activate by adding to ~/.config/zellij/config.kdl:"
+Write-Host "Activate by adding to $ConfigPath :"
 Write-Host "  theme `"pony-$Pony`""
