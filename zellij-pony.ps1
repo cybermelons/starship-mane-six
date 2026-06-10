@@ -30,7 +30,7 @@ if (-not $OutDir) {
 $Palettes = @{
   twilight = @{
     fg='#f5e6ff'; bg='#0a0414'; black='#1a1033'; white='#f5e6ff'
-    red='#f5a9d0'; green='#6bcf7f'; yellow='#ffd93d'
+    red='#f5a9d0'; green='#4e9d6a'; yellow='#ffd93d'
     blue='#6cb4ee'; magenta='#b48ce8'; cyan='#7fb8d4'; orange='#f0a04b'
   }
   rainbow = @{
