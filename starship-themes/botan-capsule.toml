@@ -1,0 +1,62 @@
+# Generated: hololive=botan (Shishiro Botan) shape=capsule — silver mane / gold accent / blue eyes
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](#d4a94a)[ 󰀄 ](bg:#d4a94a fg:#1a1e28)$hostname[](fg:#d4a94a)\
+ [](#8a8f9c)$directory[](fg:#8a8f9c)\
+ [](#3a4152)$git_branch$git_status[](fg:#3a4152)\
+ [](#252a38)$nodejs$rust$golang$php$python[](fg:#252a38)\
+ [](#1a1e28)$time[](fg:#1a1e28)\
+\n$character"""
+
+[directory]
+style = "fg:#1a1e28 bg:#8a8f9c"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+
+[git_branch]
+symbol = ""
+format = '[ $symbol $branch ](fg:#e8b84a bg:#3a4152)'
+
+[git_status]
+format = '[($all_status$ahead_behind )](fg:#e8b84a bg:#3a4152)'
+
+[nodejs]
+symbol = ""
+format = '[ $symbol ($version) ](fg:#7fb3d5 bg:#252a38)'
+
+[rust]
+symbol = ""
+format = '[ $symbol ($version) ](fg:#7fb3d5 bg:#252a38)'
+
+[golang]
+symbol = ""
+format = '[ $symbol ($version) ](fg:#7fb3d5 bg:#252a38)'
+
+[php]
+symbol = ""
+format = '[ $symbol ($version) ](fg:#7fb3d5 bg:#252a38)'
+
+[python]
+symbol = ""
+format = '[ $symbol ($version )(\($virtualenv\) )](fg:#7fb3d5 bg:#252a38)'
+python_binary = ["python", "python3"]
+
+[time]
+disabled = false
+time_format = "%R"
+format = '[  $time ](fg:#c8ccd4 bg:#1a1e28)'
+
+[hostname]
+ssh_only = true
+ssh_symbol = ""
+format = '[$hostname ](bg:#d4a94a fg:#1a1e28)'
+
+[character]
+success_symbol = '[](#d4a94a)'
+error_symbol = '[](#e05555)'
