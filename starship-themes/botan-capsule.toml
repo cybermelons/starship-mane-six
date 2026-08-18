@@ -57,7 +57,7 @@ format = '[  $time ](fg:#e8b84a bg:#1a1e28)'
 
 [username]
 show_always = true
-format = '[ $user ](bg:#d4a94a fg:#1a1e28)'
+format = '[ $user](bg:#d4a94a fg:#1a1e28)'
 
 [hostname]
 ssh_only = false
