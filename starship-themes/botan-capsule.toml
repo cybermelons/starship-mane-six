@@ -9,7 +9,7 @@ format = """
 $username$hostname\
 [](fg:#2b2f36 bg:#1b1e24)\
 $directory\
-[](fg:#1b1e24 bg:#d4a94a)[](fg:#d4a94a bg:#2b2f36)\
+[](fg:#1b1e24 bg:#f2f3f5)[](fg:#f2f3f5 bg:#5a5f68)[](fg:#5a5f68 bg:#d4a94a)[](fg:#d4a94a bg:#2b2f36)\
 $git_branch$git_status\
 [](fg:#2b2f36 bg:#1b1e24)\
 $nodejs$rust$golang$php$python\
@@ -25,34 +25,34 @@ truncation_length = 3
 truncation_symbol = "…/"
 
 [directory.substitutions]
-"Documents" = " "
-"Downloads" = " "
+"Documents" = "󰈙 "
+"Downloads" = "󰇚 "
 
 [git_branch]
-symbol = ""
+symbol = ""
 format = '[ $symbol $branch ](fg:#d4a94a bg:#2b2f36)'
 
 [git_status]
 format = '[($all_status$ahead_behind )](fg:#c8cbd0 bg:#2b2f36)'
 
 [nodejs]
-symbol = ""
+symbol = ""
 format = '[ $symbol ($version) ](fg:#8b9098 bg:#1b1e24)'
 
 [rust]
-symbol = ""
+symbol = ""
 format = '[ $symbol ($version) ](fg:#8b9098 bg:#1b1e24)'
 
 [golang]
-symbol = ""
+symbol = ""
 format = '[ $symbol ($version) ](fg:#8b9098 bg:#1b1e24)'
 
 [php]
-symbol = ""
+symbol = ""
 format = '[ $symbol ($version) ](fg:#8b9098 bg:#1b1e24)'
 
 [python]
-symbol = ""
+symbol = ""
 format = '[ $symbol ($version )(\($virtualenv\) )](fg:#8b9098 bg:#1b1e24)'
 python_binary = ["python", "python3"]
 
@@ -67,7 +67,7 @@ format = '[ $user](bg:#2b2f36 fg:#f2f3f5)'
 
 [hostname]
 ssh_only = false
-ssh_symbol = ""
+ssh_symbol = "󰣀"
 format = '[@$hostname ](bg:#2b2f36 fg:#f2f3f5)'
 
 [character]
