@@ -1,68 +1,74 @@
-# Generated: hololive=botan (Shishiro Botan) — silver/gold/blue, powerline (matches noel)
+# Generated: hololive=botan (Shishiro Botan) — monochrome adidas stripes, gold as jewelry
+# Structure mirrors noel.toml. Gold (#d4a94a) appears ONCE, on the git branch, like an earring.
+# Strictly neutral greys elsewhere: no warm tint, to stay clear of watame/fluttershy's gold chassis.
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[░▒▓](#d4a94a)\
-[ 🦁 ](bg:#d4a94a fg:#1a1e28)\
+[░▒▓](#f2f3f5)\
+[ 🦁 ](bg:#f2f3f5 fg:#0e0f12)\
 $username$hostname\
-[](bg:#8a8f9c fg:#d4a94a)\
+[](bg:#c8cbd0 fg:#f2f3f5)\
 $directory\
-[](fg:#8a8f9c bg:#3a4152)\
+[](fg:#c8cbd0 bg:#3f434a)\
 $git_branch$git_status\
-[](fg:#3a4152 bg:#252a38)\
+[](fg:#3f434a bg:#212429)\
 $nodejs$rust$golang$php$python\
-[](fg:#252a38 bg:#1a1e28)\
+[](fg:#212429 bg:#0e0f12)\
 $time\
-[](fg:#1a1e28)\
+[](fg:#0e0f12)\
 \n$character"""
 
 [directory]
-style = "fg:#1a1e28 bg:#8a8f9c"
+style = "fg:#14161a bg:#c8cbd0"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+
 [git_branch]
-symbol = ""
-format = '[ $symbol $branch ](fg:#e8b84a bg:#3a4152)'
+symbol = ""
+format = '[ $symbol $branch ](fg:#d4a94a bg:#3f434a)'
 
 [git_status]
-format = '[($all_status$ahead_behind )](fg:#e8b84a bg:#3a4152)'
+format = '[($all_status$ahead_behind )](fg:#b9bcc2 bg:#3f434a)'
 
 [nodejs]
-symbol = ""
-format = '[ $symbol ($version) ](fg:#7fb3d5 bg:#252a38)'
+symbol = ""
+format = '[ $symbol ($version) ](fg:#9a9ea6 bg:#212429)'
 
 [rust]
-symbol = ""
-format = '[ $symbol ($version) ](fg:#7fb3d5 bg:#252a38)'
+symbol = ""
+format = '[ $symbol ($version) ](fg:#9a9ea6 bg:#212429)'
 
 [golang]
-symbol = ""
-format = '[ $symbol ($version) ](fg:#7fb3d5 bg:#252a38)'
+symbol = ""
+format = '[ $symbol ($version) ](fg:#9a9ea6 bg:#212429)'
 
 [php]
-symbol = ""
-format = '[ $symbol ($version) ](fg:#7fb3d5 bg:#252a38)'
+symbol = ""
+format = '[ $symbol ($version) ](fg:#9a9ea6 bg:#212429)'
 
 [python]
-symbol = ""
-format = '[ $symbol ($version )(\($virtualenv\) )](fg:#7fb3d5 bg:#252a38)'
+symbol = ""
+format = '[ $symbol ($version )(\($virtualenv\) )](fg:#9a9ea6 bg:#212429)'
 python_binary = ["python", "python3"]
 
 [time]
 disabled = false
 time_format = "%R"
-format = '[  $time ](fg:#e8b84a bg:#1a1e28)'
+format = '[  $time ](fg:#71757d bg:#0e0f12)'
 
 [username]
 show_always = true
-format = '[ $user](bg:#d4a94a fg:#1a1e28)'
+format = '[ $user](bg:#f2f3f5 fg:#0e0f12)'
 
 [hostname]
 ssh_only = false
 ssh_symbol = ""
-format = '[@$hostname ](bg:#d4a94a fg:#1a1e28)'
+format = '[@$hostname ](bg:#f2f3f5 fg:#0e0f12)'
 
 [character]
 success_symbol = '[❯](bold #d4a94a)'
