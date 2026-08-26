@@ -4,10 +4,10 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[░▒▓](#f2f3f5)\
-[ 🦁 ](bg:#f2f3f5 fg:#0e0f12)\
+[░▒▓](#2b2f36)\
+[ 🦁 ](bg:#2b2f36 fg:#d4a94a)\
 $username$hostname\
-[](bg:#c8cbd0 fg:#f2f3f5)\
+[](bg:#c8cbd0 fg:#2b2f36)\
 $directory\
 [](fg:#c8cbd0 bg:#3f434a)\
 $git_branch$git_status\
@@ -63,12 +63,12 @@ format = '[  $time ](fg:#71757d bg:#0e0f12)'
 
 [username]
 show_always = true
-format = '[ $user](bg:#f2f3f5 fg:#0e0f12)'
+format = '[ $user](bg:#2b2f36 fg:#f2f3f5)'
 
 [hostname]
 ssh_only = false
 ssh_symbol = ""
-format = '[@$hostname ](bg:#f2f3f5 fg:#0e0f12)'
+format = '[@$hostname ](bg:#2b2f36 fg:#f2f3f5)'
 
 [character]
 success_symbol = '[❯](bold #d4a94a)'
