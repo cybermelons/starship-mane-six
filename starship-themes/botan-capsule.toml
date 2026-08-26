@@ -1,4 +1,4 @@
-# Generated: hololive=botan (Shishiro Botan) — monochrome adidas stripes, gold as jewelry
+# Generated: hololive=botan (Shishiro Botan) — monochrome adidas stripes, gold as jewelry, sharp chevron dividers
 # Structure mirrors noel.toml. Gold (#d4a94a) appears ONCE, on the git branch, like an earring.
 # Strictly neutral greys elsewhere: no warm tint, to stay clear of watame/fluttershy's gold chassis.
 "$schema" = 'https://starship.rs/config-schema.json'
@@ -7,15 +7,15 @@ format = """
 [░▒▓](#f2f3f5)\
 [ 🦁 ](bg:#f2f3f5 fg:#0e0f12)\
 $username$hostname\
-[](bg:#c8cbd0 fg:#f2f3f5)\
+[](bg:#c8cbd0 fg:#f2f3f5)\
 $directory\
-[](fg:#c8cbd0 bg:#3f434a)\
+[](fg:#c8cbd0 bg:#3f434a)\
 $git_branch$git_status\
-[](fg:#3f434a bg:#212429)\
+[](fg:#3f434a bg:#212429)\
 $nodejs$rust$golang$php$python\
-[](fg:#212429 bg:#0e0f12)\
+[](fg:#212429 bg:#0e0f12)\
 $time\
-[](fg:#0e0f12)\
+[](fg:#0e0f12)\
 \n$character"""
 
 [directory]
