@@ -7,9 +7,9 @@ format = """
 [░▒▓](#2b2f36)\
 [ 🦁 ](bg:#2b2f36 fg:#d4a94a)\
 $username$hostname\
-[](fg:#2b2f36 bg:#1b1e24)\
+[](fg:#2b2f36 bg:#0e0f12)[](fg:#0e0f12 bg:#f2f3f5)[](fg:#f2f3f5 bg:#0e0f12)[](fg:#0e0f12 bg:#f2f3f5)[](fg:#f2f3f5 bg:#0e0f12)[](fg:#0e0f12 bg:#f2f3f5)[](fg:#f2f3f5 bg:#0e0f12)[](fg:#0e0f12 bg:#1b1e24)\
 $directory\
-[](fg:#1b1e24 bg:#f2f3f5)[](fg:#f2f3f5 bg:#5a5f68)[](fg:#5a5f68 bg:#d4a94a)[](fg:#d4a94a bg:#2b2f36)\
+[](fg:#1b1e24 bg:#8b9098)[](fg:#8b9098 bg:#5a5f68)[](fg:#5a5f68 bg:#3f434a)[](fg:#3f434a bg:#d4a94a)[](fg:#d4a94a bg:#2b2f36)\
 $git_branch$git_status\
 [](fg:#2b2f36 bg:#1b1e24)\
 $nodejs$rust$golang$php$python\
