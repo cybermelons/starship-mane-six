@@ -103,3 +103,30 @@ Add your own pony by appending an entry to `$Palettes`. Add a new shape by appen
 ## License
 
 MIT
+
+## Preview scripts (bash)
+
+Terminal preview helpers for iterating on a theme's separators and layout.
+All render live prompts in your own terminal, so glyphs and colors are real.
+
+| script | what it shows |
+|---|---|
+| `./pl-glyphs.sh` | every powerline separator codepoint (E0B0-E0BF, box slashes), solo / as stripes / as a segment edge |
+| `./botan-stripes.sh` | slash glyphs x 2-4 stripes x tight/spaced, normal and inverted |
+| `./botan-variants.sh [dir...]` | full prompts across divider treatments; `BOTAN_SLASH=0xE0B8` swaps the glyph |
+| `./botan-layouts.sh [dir...]` | full-prompt layout variants - where stripes and gradients live |
+
+Both `botan-variants.sh` and `botan-layouts.sh` read a base config
+(`$BOTAN_BASE`, default `~/.config/starship-themes/botan.toml`), generate
+variants into a cache dir (`$BOTAN_OUT`), and print the `cp` command to apply one.
+
+### Separator glyph notes
+
+- Filled triangles: `E0B8` lower-left, `E0BA` lower-right, `E0BC` upper-left, `E0BE` upper-right
+- Thin slashes: `E0B9` `\`, `E0BB` `/` (canonical); `E0BD`/`E0BF` are named `*_redundant` upstream
+- `E0B8-E0BF` are outside the base Powerline range (`E0A0-E0B3`) and need a patched Nerd Font
+- `U+2571 /` is box-drawing and East-Asian ambiguous-width - it can render double-width and desync a prompt
+
+A stripe is a **mirrored glyph pair** - `[dark fg, light bg][light fg, dark bg]` - where the
+slanted band between the two diagonals is the stripe body. Gaps cannot be narrowed below one
+cell: thin/hair spaces render full-width in a monospace terminal.
